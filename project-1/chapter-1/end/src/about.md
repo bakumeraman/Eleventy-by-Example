@@ -1,5 +1,5 @@
 ---
-layout: "layouts/base.html"
+layout: "layouts/base.liquid"
 ---
 
 ## The page content can go here

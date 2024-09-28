@@ -1,5 +1,5 @@
 ---
-layout: "base.html"
+layout: "base.liquid"
 data: 
   html: <h1 class="myClass">Test</h1><p>Test</p>
   date: "2020-01-01"

@@ -1,6 +1,6 @@
 ---
 pageId: "about"
-layout: "layouts/base.html"
+layout: "layouts/base.liquid"
 title: "About us"
 bannerContent: "This is a little paragraph about the company."
 ---
