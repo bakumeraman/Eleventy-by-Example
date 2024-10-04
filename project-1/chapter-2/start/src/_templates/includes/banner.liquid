@@ -1,12 +1,14 @@
-{% if title or bannerContent %}
+{%- if title or bannerContent -%}
 <section class="banner{% if pageId == "home" %} banner--home{% endif %}">
-    {% if title %}<h1>{{ title }}</h1>{% endif %}
+    {% if title %}<h1>{{ title }}</h1>{% endif -%}
     {% if bannerContent %}<p>{{ bannerContent }}</p>{% endif %}
 </section>
-{% endif %}
+{%- endif -%}
 
+{% comment %}{% if triptychs %}{% endcomment %}
 <section class="triptych">
-    {% for triptych in triptychs %}
-    {% include "includes/triptych.liquid" %}
-    {% endfor %}
+    {% for triptych in triptychs -%}
+        {% render "includes/card.liquid", headline: triptych.headline, content: triptych.content %}
+    {% endfor -%}
 </section>
+{% comment %}{% endif %}{% endcomment %}
