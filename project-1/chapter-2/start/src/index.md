@@ -1,6 +1,6 @@
 ---
-pageId: "home"
+pageId: "accueil"
 layout: "layouts/base.liquid"
-title: "This is my homepage"
-bannerContent: "This is my banner content"
+title: "Eleventy c'est génial"
+bannerContent: "Site d'entrainement pour Eleventy"
 ---
