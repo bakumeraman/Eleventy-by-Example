@@ -1,7 +1,12 @@
-{% include 'includes/header.html' %}
-{% if title %}<h1 class="mb-1">{{ title }}</h1>{% endif %}
+{%- include 'includes/header.liquid' %}
 
+{%- if title %}
+<h1 class="mb-1">{{ title }}</h1>
+{% endif %}
+
+{%- if author %}
 <p class="m-0">By {{ author }} | Posted on {{ dateString }}</p>
+{%  endif %}
 
 {{ content }}
 <!-- create nextPost and previousPost variables -->
@@ -9,17 +14,18 @@
 {% assign nextPost = collections.post | getNextCollectionItem %}
 {% assign previousPost = collections.post | getPreviousCollectionItem %}
 
-{% if nextPost %}
+{%- if nextPost %}
     <div class="mt-4">
         <h3>Next Post</h3>
         <h4><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></h4>
     </div>
-{% endif %}
-{% if previousPost %}
+{%- endif %}
+
+{%- if previousPost %}
     <div class="mt-4">
         <h3>Previous Post</h3>
         <h4><a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></h4>
     </div>
-{% endif %}
+{%- endif %}
 
-{% include 'includes/footer.html' %}
+{% include 'includes/footer.liquid' %}

@@ -10,8 +10,6 @@ module.exports = function(eleventyConfig) {
         perPageCount: 10 // Items per page of your paginated category (default: 5)
     })
 
-
-
     // Copy `assets/` to `_site/assets/`
     eleventyConfig.addPassthroughCopy("assets");
 
